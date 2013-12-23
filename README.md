@@ -1,4 +1,6 @@
 jquake
 ======
 
-Parsing USGS earthquake data using jQuery
+Parsing USGS earthquake data using jQuery appending to the body of the page.
+
+Will use in future projects.

@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.9.0.min.js"><\/script>')</script>
+		<script type="text/javascript">
+			$(document).ready(function () {
+			    $.getJSON( "eq_json.json", function( data ) {
+					var mag = [];
+					var loc = [];
+					var depth = [];
+					$.each( data.features, function( key, val ) {
+						mag.push(val.properties.mag);
+						place = val.properties.place;
+						if (place.indexOf(" of ")) {
+						    place = place.substr(place.indexOf(" of ") + 3);
+						}
+						loc.push(place);
+						depth.push(val.geometry.coordinates[2]);
+					});
+			    	$.each(mag, function(i, v){
+			    		 $("<p>"+v+"<br/>"+loc[i]+"<br/>"+depth[i]+"</p>").appendTo( "body" );
+			    	});
+				});
+			}); 
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
