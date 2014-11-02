@@ -7,4 +7,4 @@ An example of proxy.php is available in this [gist](https://gist.github.com/bmcc
 
 Will use in future projects.
 
-* [Tabular use demo](http://mzx.mobi/jquake/)
+* [Tabular use demo](http://bmcculley.ejank.com/jquake/)
